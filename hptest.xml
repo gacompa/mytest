@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="4.0" method="upgrade">
+    <name>com_hptest</name>
+    <creationDate>2022-11-23</creationDate>
+    <copyright>2022 Giorgio</copyright>
+    <license>GNU General Public License versione 2 o successiva; vedi LICENSE.txt</license>
+    <author>Giorgio</author>
+    <authorEmail>gacompa@gmail.com</authorEmail>
+    <authorUrl>http://scoutcodera.it</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>COM_HPTEST_XML_DESCRIPTION</description>
+    <namespace path="src">Hptest\Component\Hptest</namespace>
+    
+    
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <schemas>
+            <schemapath type="mysql">sql/updates</schemapath>
+        </schemas>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    
+
+    <files folder="site">
+        <folder>src</folder>
+        <folder>forms</folder>
+        <folder>tmpl</folder>
+    </files>
+    <media destination="com_hptest" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <filename>joomla.asset.json</filename>
+    </media>
+    <languages folder="site/languages">
+        
+			<language tag="en-GB">en-GB/com_hptest.ini</language>
+			<language tag="it-IT">it-IT/com_hptest.ini</language>
+    </languages>
+    <administration>
+        <menu>COM_HPTEST</menu>
+        <submenu>
+            
+			<menu link="option=com_hptest&amp;view=valori" view="valori" alt="Hptest/Valori">COM_HPTEST_TITLE_VALORI</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <folder>forms</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+            <folder>services</folder>
+            <folder>presets</folder>
+            <folder>sql</folder>
+        </files>
+        <languages folder="administrator/languages">
+            
+			<language tag="en-GB">en-GB/com_hptest.ini</language>
+			<language tag="en-GB">en-GB/com_hptest.sys.ini</language>
+			<language tag="it-IT">it-IT/com_hptest.ini</language>
+			<language tag="it-IT">it-IT/com_hptest.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+    </plugins>
+    
+
+    <updateservers>
+        <server type="extension" priority="1" name="com_hptest">https://nocdn.component-creator.com/index.php?task=builder.preupdatecheckhook&amp;option=com_combuilder&amp;component=NzM3NjUtMjA1MTQ1</server>
+    </updateservers>
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->
