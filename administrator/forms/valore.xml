@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form addfieldprefix="Hptest\Component\Hptest\Administrator\Field">
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="ordering"/>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="JGLOBAL_FIELD_CREATED_BY_LABEL" description="JGLOBAL_FIELD_CREATED_BY_DESC" hidden="true" hint="COM_HPTEST_FORM_LBL_VALORE_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="JGLOBAL_FIELD_MODIFIED_BY_LABEL" description="JGLOBAL_FIELD_MODIFIED_BY_DESC" hidden="true" hint="COM_HPTEST_FORM_LBL_VALORE_MODIFIED_BY"/>
+    <field name="valore_visibile" filter="safehtml" type="text" required="true" message="Compila il campo" label="COM_HPTEST_FORM_LBL_VALORE_VALORE_VISIBILE" description="COM_HPTEST_FORM_DESC_VALORE_VALORE_VISIBILE" hint="COM_HPTEST_FORM_LBL_VALORE_VALORE_VISIBILE"/>
+    <field name="emailhp" validate="email" type="email" label="COM_HPTEST_FORM_LBL_VALORE_EMAILHP" description="COM_HPTEST_FORM_DESC_VALORE_EMAILHP" hint="COM_HPTEST_FORM_LBL_VALORE_EMAILHP"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>
